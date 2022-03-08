@@ -1,5 +1,7 @@
 package pl.lublin.wsei.java.cwiczenia.myLib;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class StringFun {
   public static String anarchize(String word){
       String result = "";
@@ -24,6 +26,15 @@ public class StringFun {
           }
       }
       return result;
+  }
+
+  public static String camelize(String word){
+        String text = word.toLowerCase();
+        String[] arr = StringUtils.split(text);
+        for(int i = 1; i<arr.length; i++){
+          arr[i] = StringUtils.capitalize(arr[i]);
+        }
+        return StringUtils.join(arr);
   }
 
 
