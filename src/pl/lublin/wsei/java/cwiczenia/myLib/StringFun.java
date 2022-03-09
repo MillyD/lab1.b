@@ -37,5 +37,16 @@ public class StringFun {
         return StringUtils.join(arr);
   }
 
+  public static String decamelize(String word){
+      String result = "";
+      for(int i = 0; i<word.length(); i++) {
+          if (Character.isUpperCase(word.charAt(i))){
+              result += " ";
+          }
+          result += word.charAt(i);
+      }
+      return result;
+  }
+
 
 }
