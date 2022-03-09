@@ -38,13 +38,21 @@ public class StringFun {
   }
 
   public static String decamelize(String word){
+
       String result = "";
-      for(int i = 0; i<word.length(); i++) {
+      int start = 0, end;
+
+      for(int i = start; i<word.length(); i++) {
           if (Character.isUpperCase(word.charAt(i))){
-              result += " ";
+              end = i;
+              result += word.substring(start,end) + " ";
+              start = i;
           }
-          result += word.charAt(i);
       }
+      result += word.substring(start,word.length()) + " ";
+
+
+
       return result;
   }
 

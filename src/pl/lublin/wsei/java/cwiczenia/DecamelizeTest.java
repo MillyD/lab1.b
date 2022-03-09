@@ -15,5 +15,6 @@ public class DecamelizeTest {
             System.out.println("Podany ciąg: " + str);
             System.out.println("Rezultat decamelize(): " + StringFun.decamelize(str));
         }
+
     }
 }
