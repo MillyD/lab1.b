@@ -38,22 +38,8 @@ public class StringFun {
   }
 
   public static String decamelize(String word){
-
-      String result = "";
-      int start = 0, end;
-
-      for(int i = start; i<word.length(); i++) {
-          if (Character.isUpperCase(word.charAt(i))){
-              end = i;
-              result += word.substring(start,end) + " ";
-              start = i;
-          }
-      }
-      result += word.substring(start,word.length()) + " ";
-
-
-
-      return result;
+      String[] strings = StringUtils.splitByCharacterTypeCamelCase(word);
+      return StringUtils.join(strings, " ");
   }
 
 
