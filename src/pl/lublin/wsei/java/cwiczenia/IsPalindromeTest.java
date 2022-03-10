@@ -1,4 +1,6 @@
-package pl.lublin.wsei.java.cwiczenia.myLib;
+package pl.lublin.wsei.java.cwiczenia;
+
+import pl.lublin.wsei.java.cwiczenia.myLib.StringFun;
 
 import java.io.PrintStream;
 import java.util.Scanner;

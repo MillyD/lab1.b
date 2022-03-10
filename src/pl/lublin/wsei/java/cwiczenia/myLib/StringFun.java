@@ -2,6 +2,9 @@ package pl.lublin.wsei.java.cwiczenia.myLib;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Random;
+import java.util.stream.IntStream;
+
 public class StringFun {
     public static String anarchize(String word) {
         String result = "";
@@ -41,8 +44,8 @@ public class StringFun {
     }
 
     public static boolean isPalindrome(String word) {
-        String a,b;
-        if(StringUtils.containsWhitespace(word)) {
+        String a, b;
+        if (StringUtils.containsWhitespace(word)) {
             word = StringUtils.deleteWhitespace(word);
         }
         for (int i = 0; i < word.length() / 2; i++) {
@@ -53,6 +56,19 @@ public class StringFun {
             }
         }
         return true;
+
+    }
+
+    public static String shuffle(String word) {
+        int ran;
+        String result = "";
+        for (int i = 0; i <= word.length(); i++) {
+            ran = (int) (Math.random() * word.length());
+            result += word.substring(ran, ran+1);
+            word = word.substring(0,ran) + word.substring(ran+1);
+            i = 0;
+        }
+        return result;
 
     }
 
